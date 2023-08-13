@@ -12,7 +12,7 @@ function Rentals_Cards() {
           >
             <figure className="relative h-full w-full object-cover">
               <img
-                className="h-full w-full rounded-xl bg-blend-darken"
+                className="h-full w-full rounded-xl"
                 src={rent.cover}
                 alt={rent.title}
               ></img>
