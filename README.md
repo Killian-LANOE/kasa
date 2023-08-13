@@ -1,8 +1,7 @@
-# React + Vite
+# Recreation of Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm doing the recreation of an OpenClassrooms project : https://www.figma.com/file/E7yzU5Au4Qa4E056ej1Cfg/ARCHIVE-UI-Design-Kasa-FR-(Copy)?node-id=0%3A1&mode=dev ,
 
-Currently, two official plugins are available:
+To make this i will use ReactJS & TailwindCSS, datas will be in a JSON file as i'm concentrating mainly on frontend for now.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I will do my best to not make any mistakes but as it's probably not possible, i will later and as i code try to fix most of it.
