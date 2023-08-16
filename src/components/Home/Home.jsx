@@ -1,7 +1,7 @@
 import Rentals_Cards from "../Rentals_Cards/Rentals_Cards";
 
 function Home() {
-  const isDesktop = window.innerWidth > 1024;
+  const isDesktop = window.innerWidth >= 1024;
 
   return (
     <main className="h-full text-primary px-5 pb-5">
