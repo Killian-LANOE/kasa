@@ -62,31 +62,31 @@ function Rent_Pages() {
         </div>
       </section>
       <section className="mt-4">
-        <details className="bg-primary text-white mb-5 rounded-t-lg">
+        <details className=" text-white mb-5 rounded-t-lg">
           <summary
             onClick={handleClick}
-            className="flex justify-between py-1.5 pl-3 items-center"
+            className="flex bg-primary justify-between py-1.5 pl-3 items-center rounded-lg"
           >
             Description
             <span className="pr-1.5 pointer-events-none">
               <img src={ArrowMenu} alt="Arrow of menu"></img>
             </span>
           </summary>
-          <p className="bg-secondary text-primary px-3 pt-4">
+          <p className="bg-secondary text-primary px-3 pt-4 rounded-lg pb-2">
             {rent.description}
           </p>
         </details>
-        <details className="bg-primary text-white mb-[5.5rem] rounded-t-lg">
+        <details className=" text-white mb-[5.5rem]">
           <summary
             onClick={handleClick}
-            className="flex justify-between py-1.5 pl-3 items-center"
+            className="flex bg-primary justify-between py-1.5 pl-3 items-center rounded-lg"
           >
             Équipements
             <span className="pr-1.5 pointer-events-none pl-1.5">
               <img src={ArrowMenu} alt="Arrow of menu"></img>
             </span>
           </summary>
-          <ul className="bg-secondary text-primary px-3 pt-4">
+          <ul className="bg-secondary text-primary px-3 pt-4 rounded-lg pb-2">
             {rent.equipments.map((equipment) => {
               return <li key={equipment}>{equipment}</li>;
             })}
