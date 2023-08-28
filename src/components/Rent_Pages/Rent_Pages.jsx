@@ -18,7 +18,7 @@ function Rent_Pages() {
     });
   }
 
-  function handleClick(e) {
+  function handleArrow(e) {
     const Arrow = e.target.querySelector("img");
     Arrow.classList.toggle("rotate-180");
   }
@@ -32,6 +32,7 @@ function Rent_Pages() {
           alt={rent.title}
         ></img>
       </div>
+
       <section className="flex flex-col">
         <div className="flex flex-col gap-1 mb-4">
           <h1 className="text-lg font-medium">{rent.title}</h1>
@@ -49,6 +50,7 @@ function Rent_Pages() {
             })}
           </ul>
         </div>
+
         <div className="flex flex-row-reverse justify-between items-center">
           <div className="flex flex-row-reverse gap-3 items-center">
             <img
@@ -61,10 +63,11 @@ function Rent_Pages() {
           <StarsRatings rating={rent.rating} />
         </div>
       </section>
+
       <section className="mt-4">
         <details className=" text-white mb-5 rounded-t-lg">
           <summary
-            onClick={handleClick}
+            onClick={handleArrow}
             className="flex bg-primary justify-between py-1.5 pl-3 items-center rounded-lg"
           >
             Description
@@ -76,9 +79,10 @@ function Rent_Pages() {
             {rent.description}
           </p>
         </details>
+
         <details className=" text-white mb-[5.5rem]">
           <summary
-            onClick={handleClick}
+            onClick={handleArrow}
             className="flex bg-primary justify-between py-1.5 pl-3 items-center rounded-lg"
           >
             Équipements
