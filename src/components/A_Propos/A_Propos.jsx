@@ -30,22 +30,22 @@ function A_Propos() {
   }
 
   return (
-    <main className="mobile-height text-primary px-5 mt-4">
-      <section className="h-56 w-full rounded-xl bg-black/30 bg-A_Propos_Banner bg-cover bg-no-repeat bg-blend-darken"></section>
-      <section className="flex flex-col gap-3 mt-5">
+    <main className="mobile-height md:tablet-height text-primary px-5 mt-4 md:mt-11 md:px-12">
+      <section className="h-56 w-full rounded-xl bg-black/30 bg-A_Propos_Banner bg-cover bg-no-repeat bg-center bg-blend-darken"></section>
+      <section className="flex flex-col gap-3 mt-5 md:mt-8 md:gap-6">
         {A_Propos_Infos.map((info) => {
           return (
             <details className="last:pb-11" key={info.title}>
               <summary
                 onClick={handleArrow}
-                className="flex justify-between items-center h-8 pl-3 text-white text-sm bg-primary rounded-md"
+                className="flex justify-between items-center pl-3 py-1 text-white text-sm bg-primary rounded-md md:text-lg "
               >
                 {info.title}
                 <span className="pr-1.5 pointer-events-none">
                   <img src={ArrowMenu} alt="Arrow of menu"></img>
                 </span>
               </summary>
-              <p className="text-xs h-36 w-full px-3 pt-4 bg-secondary rounded-md">
+              <p className="text-xs h-36 w-full px-3 pt-4 bg-secondary rounded-md md:text-lg md:h-max md:py-5">
                 {info.description}
               </p>
             </details>

@@ -4,9 +4,12 @@
 
 @layer utilities{
 
-    /*mobile height minus header & footer*/
+    /*height minus header & footer*/
     .mobile-height{
         min-height: calc(100vh - 18.3rem );
+    }
+    .tablet-height{
+        min-height: calc(100vh - 18.8rem );
     }
 
 }

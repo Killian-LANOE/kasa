@@ -3,7 +3,7 @@ const StarIcon = ({ filled }) => (
     xmlns="http://www.w3.org/2000/svg"
     fill={filled ? "#FF6060" : "#E3E3E3"}
     viewBox="0 0 24 24"
-    className="w-6 h-6"
+    className="h-6 w-6 md:h-7 md:w-7"
   >
     <path d="M12 2 L15.09 8.36 L22 9.27 L17 13 L18.18 19 L12 16.73 L5.82 19 L7 13 L2 9.27 L8.91 8.36 L12 2 Z" />
   </svg>
