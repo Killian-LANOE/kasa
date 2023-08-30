@@ -11,5 +11,8 @@
     .tablet-height{
         min-height: calc(100vh - 18.8rem );
     }
+    .desktop-height{
+        min-height: calc(100vh - 20.8rem);
+    }
 
 }

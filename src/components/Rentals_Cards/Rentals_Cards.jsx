@@ -7,7 +7,7 @@ function Rentals_Cards() {
         return (
           <a
             href={`/location/:${rent.id}`}
-            className="h-64 w-full md:h-full lg:h-[21.25rem] lg:w-[21.25rem]"
+            className="h-64 w-full md:h-full lg:h-56 xl:min-h-[21.25rem]"
             key={rent.id}
           >
             <figure className="relative h-full w-full">
