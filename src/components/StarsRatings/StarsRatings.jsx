@@ -12,7 +12,6 @@ const StarIcon = ({ filled }) => (
 function StarsRatings({ rating }) {
   const filledStars = parseInt(rating);
   const remainingStars = 5 - filledStars;
-  console.log(filledStars);
 
   return (
     <div className="flex">

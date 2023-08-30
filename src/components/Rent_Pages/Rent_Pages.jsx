@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import datas from "../../data/data.json";
 import ArrowMenu from "../../assets/Arrow_Menu.svg";
 import StarsRatings from "../StarsRatings/StarsRatings";
+import { useState } from "react";
 
 function Rent_Pages() {
   const params = useParams();
   const id = params.id.replace(":", "");
+  const [number, setNumber] = useState(0);
   let rent;
-
-  window.onload = getRent();
+  let pictures;
 
   async function getRent() {
     datas.filter((data) => {
@@ -18,19 +19,70 @@ function Rent_Pages() {
     });
   }
 
+  async function getPictures() {
+    pictures = rent.pictures;
+  }
+
+  async function getDatas() {
+    getRent();
+    getPictures();
+  }
+
+  window.onload = getDatas();
+
   function handleArrow(e) {
     const Arrow = e.target.querySelector("img");
     Arrow.classList.toggle("rotate-180");
   }
 
+  function handleNextPicture() {
+    const length = pictures.length - 1;
+    if (number < length) {
+      setNumber((number) => number + 1);
+    } else if (number === length) {
+      setNumber(0);
+    }
+  }
+
+  function handleLastPicture() {
+    const length = pictures.length - 1;
+    if (number > 0) {
+      setNumber((number) => number - 1);
+    } else if (number === 0) {
+      setNumber(length);
+    }
+  }
+
   return (
     <main className=" text-primary px-5 pt-3 mobile-height md:tablet-height md:px-12 lg:px-[6.25rem] lg:desktop-height">
-      <div className="h-64 w-full mb-4 md:h-80 lg:h-[25.9rem]">
+      <div className="relative h-64 w-full mb-4 md:h-80 lg:h-[25.9rem]">
+        <button
+          id="left"
+          onClick={handleLastPicture}
+          className="bg-black/20 h-full rounded-l-xl w-10 text-6xl absolute top-1/2 -translate-y-1/2 left-0 z-10 text-black"
+        >
+          <img
+            className="absolute top-1/2 right-1/3 -translate-y-1/2 h-6 w-6 rotate-90"
+            src={ArrowMenu}
+            alt="Left Arrow Carrousel"
+          ></img>
+        </button>
         <img
           className="h-full w-full rounded-xl object-cover"
-          src={rent.pictures[0]}
+          src={pictures[number]}
           alt={rent.title}
         ></img>
+        <button
+          id="right"
+          onClick={handleNextPicture}
+          className=" bg-black/20 h-full rounded-r-xl w-10 text-6xl absolute top-1/2 -translate-y-1/2 right-0 z-10 text-black"
+        >
+          <img
+            className="absolute top-1/2 left-1/3 -translate-y-1/2 h-6 w-6 -rotate-90"
+            src={ArrowMenu}
+            alt="Right Arrow Carrousel"
+          ></img>
+        </button>
       </div>
 
       <section className="flex flex-col md:flex-row md:justify-between">

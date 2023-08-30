@@ -16,6 +16,7 @@ function Rentals_Cards() {
                 src={rent.cover}
                 alt={rent.title}
               ></img>
+
               <figcaption className="absolute bottom-0 mb-4 mx-5 text-white text-lg font-medium leading-6 z-10 md:w-10/12 md:overflow-hidden md:text-ellipsis md:whitespace-nowrap lg:whitespace-pre-line">
                 {rent.title}
               </figcaption>
