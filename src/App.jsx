@@ -12,9 +12,9 @@ function App() {
     <div className="font-Montserrat">
       <Header />
       <Routes>
-        <Route path="/kasa/" element={<Home />}></Route>
-        <Route path="/kasa/A_Propos" element={<A_Propos />}></Route>
-        <Route path="/kasa/location/:id" element={<Rent_Pages />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/A_Propos" element={<A_Propos />}></Route>
+        <Route path="/location/:id" element={<Rent_Pages />}></Route>
         <Route path="/*" element={<Error />}></Route>
       </Routes>
       <Footer />

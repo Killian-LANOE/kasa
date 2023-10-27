@@ -1,12 +1,13 @@
 import Rentals from "../../data/data.json";
+import { Link } from "react-router-dom";
 
 function Rentals_Cards() {
   return (
     <section className="h-full w-full flex flex-col gap-5 mt-[1.37rem] rounded-3xl md:grid md:grid-cols-3 md:p-6 md:bg-secondary lg:px-12 lg:py-14">
       {Rentals.map((rent) => {
         return (
-          <a
-            href={`/kasa/location/${rent.id}`}
+          <Link
+            to={`/location/${rent.id}`}
             className="h-64 w-full md:h-full lg:h-56 xl:min-h-[21.25rem]"
             key={rent.id}
           >
@@ -22,7 +23,7 @@ function Rentals_Cards() {
               </figcaption>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 rounded-xl"></div>
             </figure>
-          </a>
+          </Link>
         );
       })}
     </section>

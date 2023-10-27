@@ -10,10 +10,10 @@ function Header() {
         className="h-12 w-auto md:h-14 lg:h-[4.25rem]"
       ></img>
       <nav className="flex justify-center gap-[0.65rem] text-xs leading-[17.1px] font-medium uppercase md:text-base md:gap-6 lg:text-2xl lg:gap-14 md:normal-case">
-        <Link className="hover:underline" to="/kasa/">
+        <Link className="hover:underline" to="/">
           Accueil
         </Link>
-        <Link className="hover:underline" to="/kasa/A_Propos">
+        <Link className="hover:underline" to="/A_Propos">
           A Propos
         </Link>
       </nav>

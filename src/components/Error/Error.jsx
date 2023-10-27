@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Error() {
   const isMobile = window.innerWidth <= 425;
 
@@ -13,9 +14,9 @@ function Error() {
         </p>
       </div>
       <div>
-        <a className="text-sm underline md:text-lg" href="/kasa/">
+        <Link className="text-sm underline md:text-lg" to="/">
           Retourner sur la page d&apos;accueil
-        </a>
+        </Link>
       </div>
     </main>
   );
