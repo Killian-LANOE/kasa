@@ -13,7 +13,7 @@ function Error() {
         </p>
       </div>
       <div>
-        <a className="text-sm underline md:text-lg" href="/">
+        <a className="text-sm underline md:text-lg" href="/kasa/">
           Retourner sur la page d&apos;accueil
         </a>
       </div>
