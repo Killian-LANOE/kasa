@@ -15,7 +15,7 @@ function App() {
         <Route path="/kasa/" element={<Home />}></Route>
         <Route path="/kasa/A_Propos" element={<A_Propos />}></Route>
         <Route path="/kasa/location/:id" element={<Rent_Pages />}></Route>
-        <Route path="*" element={<Error />}></Route>
+        <Route path="/*" element={<Error />}></Route>
       </Routes>
       <Footer />
     </div>

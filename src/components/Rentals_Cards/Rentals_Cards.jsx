@@ -6,7 +6,7 @@ function Rentals_Cards() {
       {Rentals.map((rent) => {
         return (
           <a
-            href={`/kasa/location/:${rent.id}`}
+            href={`/kasa/location/${rent.id}`}
             className="h-64 w-full md:h-full lg:h-56 xl:min-h-[21.25rem]"
             key={rent.id}
           >

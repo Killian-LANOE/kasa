@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function Rent_Pages() {
   const params = useParams();
-  const id = params.id.replace(":", "");
+  const id = params.id;
   const [number, setNumber] = useState(0);
   let rent;
   let pictures;
@@ -130,7 +130,11 @@ function Rent_Pages() {
           >
             Description
             <span className="pr-1.5 pointer-events-none">
-              <img src={ArrowMenu} alt="Arrow of menu"></img>
+              <img
+                className="duration-300"
+                src={ArrowMenu}
+                alt="Arrow of menu"
+              ></img>
             </span>
           </summary>
           <p className="bg-secondary text-primary px-3 pt-4 rounded-lg pb-2 md:min-h-[24.25rem] lg:min-h-[15.5rem] lg:pt-10 lg:px-5">
@@ -145,7 +149,11 @@ function Rent_Pages() {
           >
             Équipements
             <span className="pr-1.5 pointer-events-none pl-1.5">
-              <img src={ArrowMenu} alt="Arrow of menu"></img>
+              <img
+                className="duration-300"
+                src={ArrowMenu}
+                alt="Arrow of menu"
+              ></img>
             </span>
           </summary>
           <ul className="bg-secondary text-primary px-3 pt-4 rounded-lg pb-2 md:min-h-[24.25rem] lg:min-h-[15.5rem] lg:pt-10 lg:px-5">
